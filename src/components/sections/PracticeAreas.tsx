@@ -108,39 +108,39 @@ export function PracticeAreas() {
                             className="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative z-10 shadow-2xl overflow-hidden"
                         >
                             <div className="flex flex-col md:flex-row h-full">
-                                <div className="md:w-1/3 bg-primary p-12 text-white flex flex-col justify-between min-h-[300px]">
+                                <div className="md:w-1/3 bg-primary p-8 md:p-12 text-white flex flex-col justify-between min-h-[250px] md:min-h-[300px]">
                                     <div>
                                         {(() => {
                                             const Icon = iconMap[selectedArea.id] || Scale;
-                                            return <Icon size={64} className="mb-8 opacity-80" />;
+                                            return <Icon className="mb-6 md:mb-8 opacity-80 w-12 h-12 md:w-16 md:h-16" />;
                                         })()}
-                                        <h2 className="text-3xl font-serif font-bold leading-tight">
+                                        <h2 className="text-2xl md:text-3xl font-serif font-bold leading-tight">
                                             {selectedArea.title}
                                         </h2>
                                     </div>
                                     <button
                                         onClick={() => setSelectedArea(null)}
-                                        className="mt-8 flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-white/80 transition-colors"
+                                        className="mt-6 md:mt-8 flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-widest hover:text-white/80 transition-colors"
                                     >
-                                        <X size={20} /> Close
+                                        <X size={18} /> Close
                                     </button>
                                 </div>
-                                <div className="md:w-2/3 p-12 bg-white">
+                                <div className="md:w-2/3 p-8 md:p-12 bg-white">
                                     <div className="max-w-prose">
-                                        <h4 className="text-secondary font-bold tracking-widest uppercase text-xs mb-6">Detailed Overview</h4>
-                                        <p className="text-xl font-medium text-primary mb-8 leading-relaxed italic">
+                                        <h4 className="text-secondary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-4 md:mb-6">Detailed Overview</h4>
+                                        <p className="text-lg md:text-xl font-medium text-primary mb-6 md:mb-8 leading-relaxed italic">
                                             "{selectedArea.description}"
                                         </p>
-                                        <div className="space-y-6 text-muted-foreground leading-relaxed text-lg pb-8">
+                                        <div className="space-y-4 md:space-y-6 text-muted-foreground leading-relaxed text-base md:text-lg pb-6 md:pb-8">
                                             {selectedArea.details?.split('\n\n').map((para, i) => (
                                                 <p key={i}>{para}</p>
                                             ))}
                                         </div>
-                                        <div className="pt-8 border-t border-border">
+                                        <div className="pt-6 md:pt-8 border-t border-border">
                                             <a
                                                 href="#contact"
                                                 onClick={() => setSelectedArea(null)}
-                                                className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl"
+                                                className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl"
                                             >
                                                 Book a Consultation <ArrowRight size={18} />
                                             </a>
