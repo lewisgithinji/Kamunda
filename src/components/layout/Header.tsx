@@ -42,8 +42,9 @@ export function Header() {
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/">
+                <Link href="/" className="group/logo">
                     <Logo
+                        variant={isScrolled ? "default" : "white"}
                         className={cn(
                             "transition-all duration-300",
                             isScrolled ? "scale-90" : "scale-100"
