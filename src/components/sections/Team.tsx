@@ -41,7 +41,7 @@ export function Team() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {TEAM.map((member, index) => (
                         <motion.div
-                            key={member.name}
+                            key={`${member.name}-${index}`}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
