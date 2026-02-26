@@ -119,10 +119,24 @@ export const TEAM = [
     },
     {
         name: "Andrew M. Kamunda",
-        role: "Associate",
+        role: "Partner",
         bio: "A graduate of the University of Nairobi with a focus on criminal justice and debt recovery. Andrew is known for his thorough analytical approach and his ability to achieve efficient results in complex commercial transactions.",
         specialization: ["Litigation", "Criminal Justice", "Debt Collection", "Conveyancing"],
         memberships: ["Law Society of Kenya", "Justice Advocacy Africa"]
+    },
+    {
+        name: "To Be Announced",
+        role: "Associate Advocate",
+        bio: "Joining our team soon to bolster our litigation and commercial advisory departments. This individual brings a strong academic background and a commitment to legal excellence.",
+        specialization: ["Legal Research", "Commercial Drafting", "Corporate Law"],
+        memberships: ["Law Society of Kenya"]
+    },
+    {
+        name: "To Be Announced",
+        role: "Associate Advocate",
+        bio: "A forthcoming addition to our practice, focusing on family law, succession, and alternative dispute resolution to provide comprehensive support to our private clients.",
+        specialization: ["Family Law", "Succession", "Mediation"],
+        memberships: ["Law Society of Kenya"]
     }
 ];
 
