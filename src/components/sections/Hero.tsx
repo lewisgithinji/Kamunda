@@ -1,21 +1,54 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FIRM_INFO } from "@/lib/constants";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 
+const SLIDES = [
+    {
+        image: "/supreme-court.webp",
+        overlay: "bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40"
+    },
+    {
+        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
+        overlay: "bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40"
+    },
+    {
+        image: "https://images.unsplash.com/photo-1505664194762-85b1758d5140?q=80&w=2070&auto=format&fit=crop",
+        overlay: "bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40"
+    }
+];
+
 export function Hero() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
+        }, 6000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
-            {/* Background Image */}
+            {/* Background Slider */}
             <div className="absolute inset-0 z-0">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-                    style={{
-                        backgroundImage: "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop')",
-                    }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent" />
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={currentSlide}
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1.05 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1.5, ease: "easeInOut" }}
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        style={{
+                            backgroundImage: `url('${SLIDES[currentSlide].image}')`,
+                        }}
+                    />
+                </AnimatePresence>
+                <div className={cn("absolute inset-0 z-10", SLIDES[currentSlide].overlay)} />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
