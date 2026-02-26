@@ -86,7 +86,7 @@ export function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
-                    <p>© {currentYear} {FIRM_INFO.name}. All Rights Reserved.</p>
+                    <p suppressHydrationWarning>© {currentYear} {FIRM_INFO.name}. All Rights Reserved.</p>
                     <div className="flex items-center space-x-6">
                         <Link href="#" className="hover:text-white transition-colors text-white/50">Privacy Policy</Link>
                         <Link href="#" className="hover:text-white transition-colors text-white/50">Terms of Service</Link>

@@ -132,6 +132,7 @@ export function Hero() {
                     <button
                         key={index}
                         onClick={() => setCurrentSlide(index)}
+                        suppressHydrationWarning
                         className={cn(
                             "h-1.5 transition-all duration-500 rounded-full",
                             currentSlide === index ? "w-12 bg-secondary" : "w-3 bg-white/30"
