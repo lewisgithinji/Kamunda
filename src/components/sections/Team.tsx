@@ -97,6 +97,34 @@ export function Team() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Extended Team Note */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    className="mt-20 p-8 md:p-12 bg-primary/5 rounded-[2rem] border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left"
+                >
+                    <div className="max-w-2xl">
+                        <h4 className="text-xl font-bold text-primary mb-3 leading-tight">
+                            Powered by a Comprehensive Support Infrastructure
+                        </h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                            Beyond our core leadership, Kamunda Njue & Company is bolstered by a dedicated team of <span className="font-bold text-primary">Legal Pupils</span>, <span className="font-bold text-primary">Executive Secretaries</span>, and <span className="font-bold text-primary">Support Staff</span>. Our auxiliary team is meticulously trained and well-versed in legal procedures, ensuring that every case is handled with the administrative precision and logistical efficiency it deserves.
+                        </p>
+                    </div>
+                    <div className="flex -space-x-4">
+                        {[1, 2, 3, 4].map((i) => (
+                            <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-slate-200 flex items-center justify-center overflow-hidden">
+                                <div className="w-full h-full bg-primary/20 animate-pulse" />
+                            </div>
+                        ))}
+                        <div className="w-12 h-12 rounded-full border-4 border-white bg-secondary text-primary flex items-center justify-center text-xs font-black z-10">
+                            +10
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
