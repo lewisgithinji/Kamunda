@@ -24,7 +24,8 @@ const SLIDES = [
         image: "/big-five.jpg",
         title: <>African Excellence with <span className="text-secondary italic">Global Standards</span></>,
         description: "Combining industry-hardened experience with youthful energy to secure and advance your interests in a dynamic legal landscape.",
-        overlay: "bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"
+        overlay: "bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent",
+        flip: true
     }
 ];
 
@@ -55,7 +56,10 @@ export function Hero() {
                             src={SLIDES[currentSlide].image}
                             alt="Legal background"
                             fill
-                            className="object-cover object-center scale-105"
+                            className={cn(
+                                "object-cover object-center scale-105 transition-transform duration-500",
+                                (SLIDES[currentSlide] as any).flip && "-scale-x-105"
+                            )}
                             priority
                             sizes="100vw"
                         />
