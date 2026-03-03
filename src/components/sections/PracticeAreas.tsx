@@ -3,22 +3,22 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PRACTICE_AREAS } from "@/lib/constants";
-import { Scale, Briefcase, Landmark, Handshake, ShieldAlert, Home, Gavel, Landmark as Bank, Users, UserCheck, Trees, HeartHandshake, Eye, X, ArrowRight } from "lucide-react";
+import { Scale, Briefcase, Landmark, Home, ShieldAlert, Gavel, MessageSquare, Landmark as Bank, Stethoscope, Handshake, Users, Eye, ShieldCheck, X, ArrowRight } from "lucide-react";
 
 const iconMap: Record<number, any> = {
     1: Scale,
     2: Briefcase,
     3: Landmark,
-    4: Handshake,
+    4: Home,
     5: ShieldAlert,
-    6: Home,
-    7: Gavel,
+    6: Gavel,
+    7: MessageSquare,
     8: Bank,
-    9: UserCheck,
-    10: Users,
-    11: Trees,
-    12: HeartHandshake,
+    10: Stethoscope,
+    11: Handshake,
+    12: Users,
     13: Eye,
+    14: ShieldCheck,
 };
 
 export function PracticeAreas() {

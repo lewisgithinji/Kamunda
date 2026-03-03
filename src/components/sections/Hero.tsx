@@ -10,20 +10,20 @@ import Image from "next/image";
 const SLIDES = [
     {
         image: "/supreme-court.webp",
-        title: <>Unwavering Commitment to the <span className="text-primary italic">Rule of Law</span></>,
-        description: "Navigating the highest standards of justice with rigorous intellectual analysis and unwavering integrity since 2010.",
+        title: <>Quality Work & Delivery: <span className="text-primary italic">Securing Your Interests</span></>,
+        description: "A dynamic, full-service law firm blending seasoned legal experience with youthful energy since 2010.",
         overlay: "bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"
     },
     {
         image: "/law-firm.jpg",
-        title: <>Bespoke Solutions for <span className="text-secondary italic">Complex Transactions</span></>,
-        description: "Strategically handling corporate litigation and high-value transactions with the precision and strategic foresight you deserve.",
+        title: <>Strategic Advocacy across <span className="text-secondary italic">All Courts & Tribunals</span></>,
+        description: "Handling complex civil, commercial, and constitutional litigation with meticulous preparation and an unwavering commitment to results.",
         overlay: "bg-gradient-to-r from-primary/95 via-primary/80 to-transparent"
     },
     {
         image: "/big-five.jpg",
-        title: <>African Excellence with <span className="text-primary italic">Global Standards</span></>,
-        description: "Combining industry-hardened experience with youthful energy to secure and advance your interests in a dynamic legal landscape.",
+        title: <>Bespoke Legal Solutions for <span className="text-primary italic">Corporate & Private Clients</span></>,
+        description: "Tailored corporate governance, conveyancing, and dispute resolution services that uphold the highest standards of professional ethics.",
         overlay: "bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent",
         flip: true
     }
