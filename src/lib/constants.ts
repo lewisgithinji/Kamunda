@@ -127,6 +127,7 @@ export const TEAM = [
     {
         name: "Mariam Chebet",
         role: "Associate",
+        image: "/Chebet.jpeg",
         bio: "Mariam is a junior associate with a passion for delivering innovative and client-focused legal solutions. She holds an LLB from the Catholic University of Eastern Africa and a Diploma in Law from the Kenya School of Law. Joining the firm in 2025, she brings experience from the Federation of Women Lawyers (FIDA-Kenya) and the NCAJ Special Taskforce on Children Matters. Her practice blends legal precision with strategic problem-solving in family law, medical law, and commercial litigation.",
         specialization: ["Family Law", "Medical Law", "Data Protection", "Commercial Law"],
         memberships: ["Law Society of Kenya (Young Bar)", "FIDA-Kenya", "NCAJ Children Taskforce"]
@@ -136,7 +137,7 @@ export const TEAM = [
         role: "Associate",
         image: "/Sabusaga.jpeg",
         bio: "Sabusaga is a dynamic and energetic junior advocate and a Certified Professional Mediator (2024). He holds an LLB from Africa Nazarene University and a post-graduate diploma from the Kenya School of Law. Having trained under the firm's partners, he provides well-rounded legal services across litigation, ADR, and commercial departments. His practice is marked by diligence and a strong commitment to client service in intellectual property, tax law, and employment matters.",
-        specialization: ["Litigation", "ADR", "Intellectual Property", "Tax Law"],
+        specialization: ["Litigation", "ADR", "Intellectual Property", "Tax Law", "Conveyancing"],
         memberships: ["Law Society of Kenya (Young Bar)", "Certified Professional Mediator"]
     }
 ];
