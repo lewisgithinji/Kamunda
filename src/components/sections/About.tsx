@@ -62,51 +62,65 @@ export function About() {
                         </ul>
                     </motion.div>
 
-                    {/* Image/Stats Grid */}
-                    <div className="relative">
+                    {/* Staggered Mask Layout / Partner Images */}
+                    <div className="relative py-12 px-4">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                            className="grid grid-cols-2 gap-4"
+                            transition={{ duration: 1 }}
+                            className="relative flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0 h-full min-h-[500px]"
                         >
-                            <div className="space-y-4">
-                                <div className="h-64 rounded-2xl overflow-hidden shadow-2xl">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop"
-                                        alt="Law Office"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <div className="bg-primary p-8 rounded-2xl text-white">
-                                    <h3 className="text-4xl font-serif font-bold mb-2">15+</h3>
-                                    <p className="text-white/70 text-sm">Years of Legal Excellence</p>
-                                </div>
-                            </div>
-                            <div className="space-y-4 pt-8">
-                                <div className="bg-secondary p-8 rounded-2xl text-primary">
-                                    <h3 className="text-3xl font-serif font-bold mb-2">Full Service</h3>
-                                    <p className="text-primary/70 text-sm italic">Covering all areas of law</p>
-                                </div>
-                                <div className="h-64 rounded-2xl overflow-hidden shadow-2xl">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1505664194762-85b1758d5140?q=80&w=2070&auto=format&fit=crop"
-                                        alt="Legal Gavel"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            </div>
-                        </motion.div>
+                            {/* Partner 1: Daniel (Back, Left) */}
+                            <motion.div
+                                whileHover={{ scale: 1.02 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                                className="relative w-full md:w-[70%] h-[450px] rounded-3xl overflow-hidden shadow-2xl md:absolute md:top-0 md:left-0 z-10 border-4 border-white"
+                            >
+                                <img
+                                    src="/Daniel_Kamunda.png"
+                                    alt="Daniel Njue Kamunda - Managing Partner"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
 
-                        {/* Floating Experience Badge */}
-                        <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-border flex items-center gap-4 z-20">
-                            <History className="text-secondary" size={32} />
-                            <div>
-                                <p className="font-bold text-lg">Since 2010</p>
-                                <p className="text-xs text-muted-foreground uppercase tracking-widest">Growing with Kenya</p>
-                            </div>
-                        </div>
+                                {/* Glassmorphism Badge 1 */}
+                                <div className="absolute bottom-6 left-6 right-6 backdrop-blur-md bg-white/10 border border-white/20 p-4 rounded-2xl flex items-center gap-4 text-white shadow-xl">
+                                    <div className="p-2 bg-secondary/80 rounded-lg">
+                                        <History size={24} className="text-primary" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-2xl font-serif font-bold leading-none">15+</h3>
+                                        <p className="text-[10px] uppercase tracking-widest font-bold text-white/80">Years of Legal Excellence</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            {/* Partner 2: Andrew (Front, Right) */}
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                                className="relative w-full md:w-[65%] h-[400px] rounded-3xl overflow-hidden shadow-2xl md:absolute md:bottom-0 md:right-0 z-20 border-4 border-white md:translate-y-12"
+                            >
+                                <img
+                                    src="/Andrew_Kamunda.png"
+                                    alt="Andrew Mugo Kamunda - Partner"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+
+                                {/* Glassmorphism Badge 2 */}
+                                <div className="absolute bottom-6 left-6 right-6 backdrop-blur-md bg-primary/20 border border-white/20 p-4 rounded-2xl flex items-center gap-4 text-white shadow-xl">
+                                    <div className="p-2 bg-white/10 rounded-lg">
+                                        <Award size={24} className="text-secondary" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-serif font-bold leading-none italic">Full Service</h3>
+                                        <p className="text-[10px] uppercase tracking-widest font-bold text-white/80">Expertise Across All Jurisdictions</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

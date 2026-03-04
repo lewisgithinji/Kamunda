@@ -113,6 +113,7 @@ export const TEAM = [
     {
         name: "Daniel Njue Kamunda",
         role: "Managing Partner",
+        image: "/Daniel_Kamunda.png",
         bio: "The founder and managing partner of Kamunda Njue & Company Advocates. An alumnus of the University of Nairobi (LLB Hons) and a post-graduate diploma holder from the Kenya School of Law. Daniel is a seasoned litigation practitioner with twenty (20) years of experience across civil, commercial, constitutional, banking, insurance, and media law. He also serves as a board member at the Estate Agents Registration Board. Prior to establishing the Firm, he practiced with leading firms including Mohammed Muigai Advocates and Mwaniki Gachoka & Company, specializing in complex and high-value litigation for major institutions like ABSA Bank, Nation Media Group, and Chevron Corporation.",
         specialization: ["Commercial Litigation", "Constitutional Law", "Banking & Insurance Law", "Defamation"],
         memberships: ["Law Society of Kenya (Senior Bar)", "Estate Agents Registration Board", "ICPAK"]
