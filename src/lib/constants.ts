@@ -128,7 +128,7 @@ export const TEAM = [
     {
         name: "Mariam Chebet",
         role: "Associate",
-        image: "/Chebet.jpeg",
+        image: "/Mariam_Chebet.png",
         bio: "Mariam is a junior associate with a passion for delivering innovative and client-focused legal solutions. She holds an LLB from the Catholic University of Eastern Africa and a Diploma in Law from the Kenya School of Law. Joining the firm in 2025, she brings experience from the Federation of Women Lawyers (FIDA-Kenya) and the NCAJ Special Taskforce on Children Matters. Her practice blends legal precision with strategic problem-solving in family law, medical law, and commercial litigation.",
         specialization: ["Family Law", "Medical Law", "Data Protection", "Commercial Law"],
         memberships: ["Law Society of Kenya (Young Bar)", "FIDA-Kenya", "NCAJ Children Taskforce"]
